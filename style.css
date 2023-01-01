@@ -3,7 +3,9 @@
 }
 
 :root{
-
+    --greeting-margin-bottom: 2.25rem;
+    --input-label-margin-bottom:0.5rem;
+    --input-section-gap: 1.30rem;
 }
 
 html, body{
@@ -14,7 +16,57 @@ body{
     margin: 0;
 }
 
+main > :is(h1,p:first-of-type){
+    margin: 0 0 var(--greeting-margin-bottom) 0;
+}
+
+main > p{
+    width: 60%;
+}
+
 main{
+    height: 100%;
+    width: 45%;
+    margin-left: 52%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--input-section-gap);
+}
+
+.input-section{
     width: 50%;
-    margin-left: 50%;
+}
+
+.input-section  > label{
+    margin-bottom: var(--input-label-margin-bottom);
+}
+
+.input-section > *{
+    width: 90%;
+    display: block;
+}
+
+fieldset{
+    border: none;
+    padding-left: unset;
+    margin-left: unset;
+    width: 100%;
+}
+
+fieldset input[type="checkbox"]{
+    margin-left: unset;
+}
+
+button{
+    width: 180px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
 }
