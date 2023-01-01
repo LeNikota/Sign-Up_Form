@@ -10,31 +10,31 @@
 <body>
     <main>
         <h1>Welcome to the odin project</h1>
-        <p class="introduction">Let's get you all set up so you can start your IT journey with our project biased learning curriculum</p>
+        <p class="introduction">Let's get you all set up so you can start your IT journey with our project biased learning curriculum.</p>
         <form action="post" method="mySite/server">
             <div class="input-section">
                 <label for="first-name">First name</label>
-                <input type="text" name="first-name" id="first-name" minlength="3" maxlength="20" required>
+                <input class="unfilled" type="text" name="first-name" id="first-name" minlength="3" maxlength="20" placeholder="John" required>
             </div>
             <div class="input-section">
                 <label for="last-name">Second name</label>
-                <input type="text" name="last-name" id="last-name" minlength="3" maxlength="20" required>
+                <input class="unfilled" type="text" name="last-name" id="last-name" minlength="3" maxlength="20" placeholder="Smith" required>
             </div>
             <div class="input-section">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+                <input class="unfilled" type="email" name="email" id="email" placeholder="JohnSmith2022@gmail.com" required>
             </div>
             <div class="input-section">
                 <label for="phone-number">Phone</label>
-                <input type="tel" name="phone-number" id="phone-number" maxlength="15">
+                <input class="unfilled" type="tel" name="phone-number" id="phone-number" pattern="\d+" placeholder="5555551234" maxlength="15">
             </div>
             <div class="input-section">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" maxlength="100" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
+                <input class="unfilled" type="password" name="password" id="password" maxlength="100" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" placeholder="q&1F684hMs&C" required>
             </div>
             <div class="input-section">
                 <label for="confirm-password">Confirm password</label>
-                <input type="password" name="confirm-password" id="confirm-password" maxlength="100" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
+                <input class="unfilled" type="password" name="confirm-password" id="confirm-password" maxlength="100" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" placeholder="q&1F684hMs&C" required>
             </div class="input-section">
             <fieldset>
                 <div>
@@ -42,7 +42,7 @@
                     <label for="receive-ad">Yes, I want to receive your ads</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="terms-of-service" id="terms-of-service">
+                    <input type="checkbox" name="terms-of-service" id="terms-of-service" required>
                     <label for="terms-of-service">I agree to the <a href="#">Terms, Privacy Policy</a>.</label>
                 </div>
             </fieldset>
@@ -50,5 +50,7 @@
         </form>
         <p>Already have an account? <a href="#">Log in</a>.</p>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
