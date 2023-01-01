@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign-Up</title>
+</head>
+<body>
+    <main>
+        <h1>Welcome to the odin project</h1>
+        <p>Let's get you all set up so you can start your IT journey with our project biased learning curriculum</p>
+        <form action="post" method="mySite/server">
+            <div>
+                <label for="first-name">First name</label>
+                <input type="text" name="first-name" id="first-name">
+            </div>
+            <div>
+                <label for="last-name">Second name</label>
+                <input type="text" name="last-name" id="last-name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="phone-number">Phone</label>
+                <input type="tel" name="phone-number" id="phone-number">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div>
+                <label for="confirm-password">Confirm password</label>
+                <input type="confirm-password" name="confirm-password" id="confirm-password">
+            </div>
+            <fieldset>
+                <div>
+                    <input type="checkbox" name="receive-ad" id="receive-ad">
+                    <label for="receive-ad">Yes, I want to receive your ads</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="terms-of-service" id="terms-of-service">
+                    <label for="terms-of-service">I agree to the <a href="#">Terms, Privacy Policy</a>.</label>
+                </div>
+            </fieldset>
+        </form>
+        <p>Already have an account? <a href="#">Log in</a>.</p>
+    </main>
+</body>
+</html>
