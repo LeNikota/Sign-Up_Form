@@ -10,31 +10,31 @@
 <body>
     <main>
         <h1>Welcome to the odin project</h1>
-        <p>Let's get you all set up so you can start your IT journey with our project biased learning curriculum</p>
+        <p class="introduction">Let's get you all set up so you can start your IT journey with our project biased learning curriculum</p>
         <form action="post" method="mySite/server">
             <div class="input-section">
                 <label for="first-name">First name</label>
-                <input type="text" name="first-name" id="first-name">
+                <input type="text" name="first-name" id="first-name" minlength="3" maxlength="20" required>
             </div>
             <div class="input-section">
                 <label for="last-name">Second name</label>
-                <input type="text" name="last-name" id="last-name">
+                <input type="text" name="last-name" id="last-name" minlength="3" maxlength="20" required>
             </div>
             <div class="input-section">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
             </div>
             <div class="input-section">
                 <label for="phone-number">Phone</label>
-                <input type="tel" name="phone-number" id="phone-number">
+                <input type="tel" name="phone-number" id="phone-number" maxlength="15">
             </div>
             <div class="input-section">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" maxlength="100" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
             </div>
             <div class="input-section">
                 <label for="confirm-password">Confirm password</label>
-                <input type="confirm-password" name="confirm-password" id="confirm-password">
+                <input type="password" name="confirm-password" id="confirm-password" maxlength="100" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
             </div class="input-section">
             <fieldset>
                 <div>

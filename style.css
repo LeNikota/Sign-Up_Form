@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
 *{
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 :root{
     --greeting-margin-bottom: 2.25rem;
     --input-label-margin-bottom:0.5rem;
     --input-section-gap: 1.30rem;
+
+    --font-color: white;
+    --label-color:rgba(255, 255, 255, 0.8);
+    --accent-color:#38bbff;
+    --invalid:#ff3842;
 }
 
 html, body{
@@ -14,14 +22,29 @@ html, body{
 
 body{
     margin: 0;
+
+    background-image: url(./background.jpg);
+    background-position: center;
+    background-size: cover;
+    color: var(--font-color);
+    caret-color: var(--font-color);
+}
+
+main{
+    border-radius: 30% 0 0 30%;
 }
 
 main > :is(h1,p:first-of-type){
     margin: 0 0 var(--greeting-margin-bottom) 0;
 }
 
-main > p{
-    width: 60%;
+main > h1{
+    font-weight: lighter;
+    font-size: 2.6rem;
+}
+
+.introduction{
+    width: 70%;
 }
 
 main{
@@ -64,9 +87,98 @@ fieldset input[type="checkbox"]{
     margin-left: unset;
 }
 
+fieldset > div{
+    margin-bottom: 4px;
+}
+
 button{
     width: 180px;
     height: 40px;
     border: none;
-    border-radius: 7px;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:#38b9ffd8;
+}
+
+button:active{
+    background-color:#38b9ff79;
+}
+
+.input-section > label{
+    font-size: 0.8rem;
+    color: var(--label-color);
+}
+
+input:not([type="checkbox"]){
+    transition: 1s border-bottom;
+}
+
+input:is(
+    [type="text"],
+    [type="email"],
+    [type="tel"],
+    [type="password"]
+){
+    background: none;
+    border: none;
+    border-bottom: var(--font-color) 1px solid;
+    padding-bottom: 2px;
+    color: var(--font-color);
+    font-size: 1.1rem;
+}
+
+input:is(
+    [type="text"],
+    [type="email"],
+    [type="tel"],
+    [type="password"],
+):focus{
+    outline: none;
+}
+
+input:is(
+    [type="text"],
+    [type="email"],
+    [type="tel"],
+    [type="password"],
+):valid{
+    border-bottom: var(--accent-color) 1px solid;
+}
+
+input:is(
+    [type="text"],
+    [type="email"],
+    [type="tel"],
+    [type="password"],
+):invalid{
+    border-bottom: var(--invalid) 1px solid;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: var(--font-color) 2px solid;
+    vertical-align:-4.8px;
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--accent-color);
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+:visited{
+    color: var(--accent-color);
 }
